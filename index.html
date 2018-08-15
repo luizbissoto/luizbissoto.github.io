@@ -1,16 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
 <body>
-<h1>I LOVE MAPIMPA</h1>
-<p>Lets go do exercises and eat ice cream</p>
+<h1>HELLO</h1>
+<p>August 15th, 2018</p>
+
+<input type="number" id="num1"> <br/>
+<input type="number" id="num2"> <br/>
+<input type="number" id="num3"> <br/>
+<button id="btn">Calculate</button>
+ 
+<h2>Your result is : </h2>
+<span id="result"></span>
 
 <script type="text/javascript">
 
-     var number;
-
-     number = window.prompt("Enter number");
-
-     window.alert(number " is largest"); 
+var btn = document.getElementById("btn");
+ 
+btn.onclick = calc;
+ 
+function calc() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var num3 = document.getElementById("num3").value;
+    var result = document.getElementById("result");
+ 
+    var sum = parseInt(num1) + parseInt(num2) + parseInt(num3);
+ 
+    result.innerHTML = num1 + " + " + num2 + " + " + num3 + " = " + sum;
+}
 
 </script>
 
